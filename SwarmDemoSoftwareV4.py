@@ -3,6 +3,7 @@ import sys
 import math
 import random
 import time
+import os
 
 # ======== Initializton =============
 pygame.init()
@@ -38,19 +39,31 @@ playerMod_expand = 0
 playerMod_movementX = 0
 playerMod_movementY = 0
 
-#Colors and Images
+#Colors
 OFFWHITE = (200, 200, 200)
 BLUE = (0, 0, 255)
 HOTPINK = (255, 105, 180)
 DARK_GRAY = (50, 50, 50)
 SPRING_GREEN = (0,255,127)
-bot_image = pygame.image.load("BOT2.png")
-Queen_image = pygame.image.load("QueenV3.png")
-Closed_Truck_Image = pygame.image.load("Truck_closed.png")
 
-Roof_image = pygame.image.load("Roof.png")
-Frame_image = pygame.image.load("Frame.png")
-Window_image = pygame.image.load("Window.png")
+# image initialization 
+script_dir = os.path.abspath(os.path.dirname(__file__))
+
+print(script_dir)
+
+bot_image_path = os.path.join(script_dir, "Assets", "BOT2.png")
+bot_image = pygame.image.load(bot_image_path)
+
+Queen_image_path = os.path.join(script_dir, "Assets", "QueenV3.png")
+Queen_image = pygame.image.load(Queen_image_path)
+
+Closed_Truck_image_path = os.path.join(script_dir, "Assets", "Truck_closed.png")
+Closed_Truck_Image = pygame.image.load(Closed_Truck_image_path)
+
+
+Roof_image = pygame.image.load(os.path.join(script_dir, "Assets", "Roof.png"))
+Frame_image = pygame.image.load(os.path.join(script_dir, "Assets", "Frame.png"))
+Window_image = pygame.image.load(os.path.join(script_dir, "Assets", "Window.png"))
 
 # Arrays
 covered = []

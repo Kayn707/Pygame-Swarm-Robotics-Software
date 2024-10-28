@@ -3,7 +3,7 @@ import sys
 import math
 import random
 import time
-
+import os
 # ======== Initializton =============
 pygame.init()
 
@@ -15,7 +15,9 @@ WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
 HOTPINK = (255, 105, 180)
 dark_gray = (50, 50, 50)
-bot_image = pygame.image.load("BOT.png")
+script_dir = os.path.abspath(os.path.dirname(__file__))
+bot_image_path = os.path.join(script_dir, "Assets", "BOT.png")
+bot_image = pygame.image.load(bot_image_path)
 covered = []
 #Generate a random position for the Hexagon
 hexagon_x = random.randint(0, WIDTH - HEXAGON_SIZE)

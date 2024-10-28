@@ -3,6 +3,7 @@ import sys
 import math
 import random
 import time
+import os
 
 # ======== Initializton =============
 pygame.init()
@@ -42,8 +43,15 @@ BLUE = (0, 0, 255)
 HOTPINK = (255, 105, 180)
 DARK_GRAY = (50, 50, 50)
 SPRING_GREEN = (0,255,127)
-bot_image = pygame.image.load("BOT.png")
-Queen_image = pygame.image.load("QueenV3.png")
+# image initialization 
+script_dir = os.path.abspath(os.path.dirname(__file__))
+
+bot_image_path = os.path.join(script_dir, "Assets", "BOT.png")
+bot_image = pygame.image.load(bot_image_path)
+
+Queen_image_path = os.path.join(script_dir, "Assets", "QueenV3.png")
+Queen_image = pygame.image.load(Queen_image_path)
+
 
 # Arrays
 covered = []
