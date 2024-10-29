@@ -43,17 +43,21 @@ clickRegistered2 = False
 playerMod_movementX = 0
 playerMod_movementY = 0
 
-#Colors and Images
+#Colors
 OFFWHITE = (200, 200, 200)
 BLUE = (0, 0, 255)
 HOTPINK = (255, 105, 180)
 DARK_GRAY = (50, 50, 50)
 SPRING_GREEN = (0,255,127)
 BROWN = (139, 69, 19)
-bot_image = pygame.image.load("BOT2.png")
-Closed_Truck_Image = pygame.image.load("Truck_closed.png")
-Frame_image = pygame.image.load("FramePart.png")
-Button_image = pygame.image.load("Button.png")
+
+
+script_dir = os.path.abspath(os.path.dirname(__file__))
+
+bot_image = pygame.image.load((os.path.join(script_dir, "Assets", "BOT2.png")))
+Closed_Truck_Image = pygame.image.load(os.path.join(script_dir, "Assets", "Truck_closed.png"))
+Frame_image = pygame.image.load(os.path.join(script_dir, "Assets", "FramePart.png"))
+Button_image = pygame.image.load(os.path.join(script_dir, "Assets", "Button.png"))
 
 # Arrays
 #covered = []

@@ -49,8 +49,6 @@ SPRING_GREEN = (0,255,127)
 # image initialization 
 script_dir = os.path.abspath(os.path.dirname(__file__))
 
-print(script_dir)
-
 bot_image_path = os.path.join(script_dir, "Assets", "BOT2.png")
 bot_image = pygame.image.load(bot_image_path)
 
